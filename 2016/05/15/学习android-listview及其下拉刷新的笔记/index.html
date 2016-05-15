@@ -84,15 +84,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="dingding">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="listview的建立1.定义一个Data实体类（作为listview适配器的适配类型）代码如下12345678910111213141516public class Data &amp;#123;    public String name;    public int imageId;    public Data(String name,int imageId)    &amp;#123;        t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习android listview及其原生下拉刷新的笔记">
+<meta property="og:url" content="http://yoursite.com/2016/05/15/学习android-listview及其下拉刷新的笔记/index.html">
 <meta property="og:site_name" content="dingding">
-<meta property="og:description">
+<meta property="og:description" content="listview的建立1.定义一个Data实体类（作为listview适配器的适配类型）代码如下12345678910111213141516public class Data &amp;#123;    public String name;    public int imageId;    public Data(String name,int imageId)    &amp;#123;        t">
+<meta property="og:updated_time" content="2016-05-15T05:21:45.840Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dingding">
-<meta name="twitter:description">
+<meta name="twitter:title" content="学习android listview及其原生下拉刷新的笔记">
+<meta name="twitter:description" content="listview的建立1.定义一个Data实体类（作为listview适配器的适配类型）代码如下12345678910111213141516public class Data &amp;#123;    public String name;    public int imageId;    public Data(String name,int imageId)    &amp;#123;        t">
 
 
 
@@ -110,7 +111,7 @@
   };
 </script>
 
-  <title> dingding </title>
+  <title> 学习android listview及其原生下拉刷新的笔记 | dingding </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -131,9 +132,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -210,9 +209,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -232,10 +231,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/05/15/学习android-listview及其下拉刷新的笔记/" itemprop="url">
-                  学习android listview及其原生下拉刷新的笔记
-                </a>
+                学习android listview及其原生下拉刷新的笔记
               
             
           </h1>
@@ -275,9 +271,7 @@
       
 
       
-        
-          
-            <h2 id="listview的建立"><a href="#listview的建立" class="headerlink" title="listview的建立"></a>listview的建立</h2><h3 id="1-定义一个Data实体类（作为listview适配器的适配类型）"><a href="#1-定义一个Data实体类（作为listview适配器的适配类型）" class="headerlink" title="1.定义一个Data实体类（作为listview适配器的适配类型）"></a>1.定义一个Data实体类（作为listview适配器的适配类型）</h3><p>代码如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Data &#123;</span><br><span class="line">    public String name;</span><br><span class="line">    public int imageId;</span><br><span class="line">    public Data(String name,int imageId)</span><br><span class="line">    &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.imageId = imageId;</span><br><span class="line">    &#125;</span><br><span class="line">    public String <span class="function"><span class="title">getName</span></span>()&#123;</span><br><span class="line">        <span class="built_in">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    public int <span class="function"><span class="title">getImageId</span></span>()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">return</span> imageId;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="listview的建立"><a href="#listview的建立" class="headerlink" title="listview的建立"></a>listview的建立</h2><h3 id="1-定义一个Data实体类（作为listview适配器的适配类型）"><a href="#1-定义一个Data实体类（作为listview适配器的适配类型）" class="headerlink" title="1.定义一个Data实体类（作为listview适配器的适配类型）"></a>1.定义一个Data实体类（作为listview适配器的适配类型）</h3><p>代码如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Data &#123;</span><br><span class="line">    public String name;</span><br><span class="line">    public int imageId;</span><br><span class="line">    public Data(String name,int imageId)</span><br><span class="line">    &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.imageId = imageId;</span><br><span class="line">    &#125;</span><br><span class="line">    public String <span class="function"><span class="title">getName</span></span>()&#123;</span><br><span class="line">        <span class="built_in">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    public int <span class="function"><span class="title">getImageId</span></span>()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">return</span> imageId;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="2-在layout目录下建立item-xml（用于加载listview中每一项的内容）"><a href="#2-在layout目录下建立item-xml（用于加载listview中每一项的内容）" class="headerlink" title="2.在layout目录下建立item.xml（用于加载listview中每一项的内容）"></a>2.在layout目录下建立item.xml（用于加载listview中每一项的内容）</h3><p>代码如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span>?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">    android:layout_height=<span class="string">"match_parent"</span>&gt;</span><br><span class="line">    &lt;ImageView</span><br><span class="line">        android:id=<span class="string">"@+id/image"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        /&gt;</span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:id=<span class="string">"@+id/text"</span></span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        /&gt;</span><br><span class="line">&lt;/LinearLayout&gt;</span><br></pre></td></tr></table></figure></p>
 <h3 id="3-创建一个自定义的适配器，继承自Arraydapter，并将泛型指定为Data类"><a href="#3-创建一个自定义的适配器，继承自Arraydapter，并将泛型指定为Data类" class="headerlink" title="3.创建一个自定义的适配器，继承自Arraydapter，并将泛型指定为Data类"></a>3.创建一个自定义的适配器，继承自Arraydapter，并将泛型指定为Data类</h3><p>代码如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class DataAdapter extends ArrayAdapter&#123;</span><br><span class="line">    private int resourceId;</span><br><span class="line">    public DataAdapter(Context context, int textViewResourceId, List&lt;Data&gt; object)&#123;</span><br><span class="line">        super(context,textViewResourceId,object);</span><br><span class="line">        resourceId = textViewResourceId;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public View getView(int position,View convertView,ViewGroup parent)&#123;</span><br><span class="line">        Data data = (Data) getItem(position);</span><br><span class="line">        View view = LayoutInflater.from(getContext()).inflate(resourceId,null);</span><br><span class="line">        ImageView dataimage = (ImageView)view.findViewById(R.id.image);</span><br><span class="line">        TextView dataName = (TextView)view.findViewById(R.id.text);</span><br><span class="line">        dataimage.setImageResource(data.getImageId());</span><br><span class="line">        dataName.setText(data.getName());</span><br><span class="line">        <span class="built_in">return</span> view;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="4-然后就是MainActivity"><a href="#4-然后就是MainActivity" class="headerlink" title="4.然后就是MainActivity"></a>4.然后就是MainActivity</h3><p>代码如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public class MainActivity extends AppCompatActivity &#123;</span><br><span class="line">    private List&lt;Data&gt; dataList = new ArrayList&lt;Data&gt;();</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        <span class="built_in">set</span>ContentView(R.layout.activity_main);</span><br><span class="line">        initData();</span><br><span class="line">        DataAdapter adapter = new DataAdapter(Main2Activity.this,R.layout.item,dataList);</span><br><span class="line">        ListView listview = (ListView)findViewById(R.id.listview1);</span><br><span class="line">        listview.setAdapter(adapter);</span><br><span class="line">        listview.setOnItemClickListener(new AdapterView.<span class="function"><span class="title">OnItemClickListener</span></span>() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, long id) &#123;</span><br><span class="line">                Data data = dataList.get(position);</span><br><span class="line">                Toast.makeText(MainActivity.this,data.getName(), Toast.LENGTH_LONG).show();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    private void <span class="function"><span class="title">initData</span></span>()&#123;</span><br><span class="line">        Data biyadi = new Data(<span class="string">"biyadi"</span>,R.drawable.biyadi);</span><br><span class="line">        dataList.add(biyadi);</span><br><span class="line">        Data falali = new Data(<span class="string">"falali"</span>,R.drawable.falali);</span><br><span class="line">        dataList.add(falali);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -286,16 +280,19 @@
 <h3 id="1-修改activity-main-xml"><a href="#1-修改activity-main-xml" class="headerlink" title="1.修改activity_main.xml"></a>1.修改activity_main.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span>?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    xmlns:tools=<span class="string">"http://schemas.android.com/tools"</span></span><br><span class="line">    android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">    android:layout_height=<span class="string">"match_parent"</span></span><br><span class="line">    android:paddingBottom=<span class="string">"@dimen/activity_vertical_margin"</span></span><br><span class="line">    android:paddingLeft=<span class="string">"@dimen/activity_horizontal_margin"</span></span><br><span class="line">    android:paddingRight=<span class="string">"@dimen/activity_horizontal_margin"</span></span><br><span class="line">    android:paddingTop=<span class="string">"@dimen/activity_vertical_margin"</span></span><br><span class="line">    tools:context=<span class="string">"com.example.ding.listview_practice.MainActivity"</span></span><br><span class="line">    android:weightSum=<span class="string">"1"</span>&gt;</span><br><span class="line">    &lt;LinearLayout</span><br><span class="line">        android:layout_width=<span class="string">"400dp"</span></span><br><span class="line">        android:layout_height=<span class="string">"65dp"</span>&gt;</span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:layout_width=<span class="string">"339dp"</span>/&gt;</span><br><span class="line">    &lt;/LinearLayout&gt;</span><br><span class="line"></span><br><span class="line">    &lt;android.support.v4.widget.SwipeRefreshLayout</span><br><span class="line">        android:id=<span class="string">"@+id/id_swipe_ly"</span></span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        android:layout_height=<span class="string">"match_parent"</span> &gt;</span><br><span class="line"></span><br><span class="line">        &lt;ListView</span><br><span class="line">        android:id=<span class="string">"@+id/listview1"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        &gt;</span><br><span class="line">    &lt;/ListView&gt;</span><br><span class="line">    &lt;/android.support.v4.widget.SwipeRefreshLayout&gt;</span><br><span class="line">&lt;/LinearLayout&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="2-修改MainActivity"><a href="#2-修改MainActivity" class="headerlink" title="2.修改MainActivity"></a>2.修改MainActivity</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">public class MainActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener&#123;</span><br><span class="line">    private static final int REFRESH_COMPLETE = 0X110;</span><br><span class="line">    private List&lt;Data&gt; dataList = new ArrayList&lt;Data&gt;();</span><br><span class="line">    private ArrayAdapter adapter;</span><br><span class="line">    private ListView listview;</span><br><span class="line">    private SwipeRefreshLayout mSwipeLayout;</span><br><span class="line"></span><br><span class="line">    private Handler mHandler = new <span class="function"><span class="title">Handler</span></span>()</span><br><span class="line">    &#123;</span><br><span class="line">        public void handleMessage(android.os.Message msg)</span><br><span class="line">        &#123;</span><br><span class="line">            switch (msg.what)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">case</span> REFRESH_COMPLETE:</span><br><span class="line">                    Data as = new Data(<span class="string">"as"</span>,R.drawable.asd);</span><br><span class="line">                    dataList.add(as);</span><br><span class="line">                    adapter.notifyDataSetChanged();</span><br><span class="line">                    mSwipeLayout.setRefreshing(<span class="literal">false</span>);</span><br><span class="line">                    <span class="built_in">break</span>;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">    @SuppressLint(<span class="string">"InlinedApi"</span>)</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        <span class="built_in">set</span>ContentView(R.layout.activity_main);</span><br><span class="line">        initdata();</span><br><span class="line">        adapter = new DataAdapter(MainActivity.this,R.layout.item,dataList);</span><br><span class="line">        listview = (ListView)findViewById(R.id.listview1);</span><br><span class="line">        mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.id_swipe_ly);</span><br><span class="line">        mSwipeLayout.setOnRefreshListener(this);</span><br><span class="line">        mSwipeLayout.setColorScheme(android.R.color.holo_blue_bright, android.R.color.holo_green_light,</span><br><span class="line">                android.R.color.holo_orange_light, android.R.color.holo_red_light);</span><br><span class="line">        listview.setAdapter(adapter);</span><br><span class="line">    &#125;</span><br><span class="line">    public void <span class="function"><span class="title">onRefresh</span></span>()</span><br><span class="line">    &#123;</span><br><span class="line">        mHandler.sendEmptyMessageDelayed(REFRESH_COMPLETE, 2000);</span><br><span class="line">    &#125;</span><br><span class="line">    private void <span class="function"><span class="title">initdata</span></span>()</span><br><span class="line">    &#123;</span><br><span class="line">        Data asd = new Data(<span class="string">"asd"</span>,R.drawable.asd);</span><br><span class="line">        dataList.add(asd);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -303,323 +300,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/05/13/同济大学高等数学第七版第十一章总结/" rel="next" title="同济大学高等数学第七版第十一章总结">
+                <i class="fa fa-chevron-left"></i> 同济大学高等数学第七版第十一章总结
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/05/13/同济大学高等数学第七版第十一章总结/" itemprop="url">
-                  同济大学高等数学第七版第十一章总结
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-13T20:57:55+08:00" content="2016-05-13">
-              2016-05-13
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="曲线积分"><a href="#曲线积分" class="headerlink" title="曲线积分"></a>曲线积分</h2><h3 id="1-对弧长的曲线积分"><a href="#1-对弧长的曲线积分" class="headerlink" title="1.对弧长的曲线积分"></a>1.对弧长的曲线积分</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![img(file:///home/ding/blog/<span class="built_in">source</span>/_posts/同济大学高等数学第七版第十一章总结/1.png)]</span><br><span class="line">式中f（x，y）相当于曲线的密度，质量=密度*弧长，\(\)计算的就是弧长，所以曲线积分算的就是曲线的质量。</span><br></pre></td></tr></table></figure>
-<h3 id="2-对坐标的曲线积分"><a href="#2-对坐标的曲线积分" class="headerlink" title="2.对坐标的曲线积分"></a>2.对坐标的曲线积分</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个公式可以分为两个部分，即 和 ， 计算的是x方向的曲线积分，即 ， 计算的是y方向的曲线积分，即 。</span><br></pre></td></tr></table></figure>
-<h3 id="3-两类曲线积分的联系"><a href="#3-两类曲线积分的联系" class="headerlink" title="3.两类曲线积分的联系"></a>3.两类曲线积分的联系</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">分别是曲线弧在点（x,y,x）处的切向量的方向角。</span><br></pre></td></tr></table></figure>
-<h3 id="4-格林公式"><a href="#4-格林公式" class="headerlink" title="4.格林公式"></a>4.格林公式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="二-曲面积分"><a href="#二-曲面积分" class="headerlink" title="二.曲面积分"></a>二.曲面积分</h2><h3 id="1-对曲面的曲线积分"><a href="#1-对曲面的曲线积分" class="headerlink" title="1.对曲面的曲线积分"></a>1.对曲面的曲线积分</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>###<br>注意P(x,y)及Q(x,y)在D上具有一阶连续偏导。<br>```</p>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">asd</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/13/new_ding/" itemprop="url">
-                  java opencv『1』
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-13T10:48:13+08:00" content="2016-05-13">
-              2016-05-13
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="环境还没配好"><a href="#环境还没配好" class="headerlink" title="环境还没配好"></a>环境还没配好</h2><h3 id="1-只知道要用到这几个包"><a href="#1-只知道要用到这几个包" class="headerlink" title="1.只知道要用到这几个包"></a>1.只知道要用到这几个包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import org.opencv.core.core;</span><br><span class="line">import org.opencv.core.Mat;</span><br><span class="line">import org.opencv.core.CvType;</span><br><span class="line">import org.opencv.core.Scalar;</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="2-标题"><a href="#2-标题" class="headerlink" title="2.标题"></a>2.标题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">仍然没有</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="3-哈哈"><a href="#3-哈哈" class="headerlink" title="3.哈哈"></a>3.哈哈</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">哈哈</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="4-asd"><a href="#4-asd" class="headerlink" title="4.asd"></a>4.asd</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">哈哈</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">asd</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/11/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-11T12:58:16+08:00" content="2016-05-11">
-              2016-05-11
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New "</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">asd</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -627,6 +333,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -646,8 +356,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -683,6 +402,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#listview的建立"><span class="nav-number">1.</span> <span class="nav-text">listview的建立</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-定义一个Data实体类（作为listview适配器的适配类型）"><span class="nav-number">1.1.</span> <span class="nav-text">1.定义一个Data实体类（作为listview适配器的适配类型）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-在layout目录下建立item-xml（用于加载listview中每一项的内容）"><span class="nav-number">1.2.</span> <span class="nav-text">2.在layout目录下建立item.xml（用于加载listview中每一项的内容）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-创建一个自定义的适配器，继承自Arraydapter，并将泛型指定为Data类"><span class="nav-number">1.3.</span> <span class="nav-text">3.创建一个自定义的适配器，继承自Arraydapter，并将泛型指定为Data类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-然后就是MainActivity"><span class="nav-number">1.4.</span> <span class="nav-text">4.然后就是MainActivity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-最后别忘了在activity-main-xml中添加listview控件"><span class="nav-number">1.5.</span> <span class="nav-text">5.最后别忘了在activity_main.xml中添加listview控件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#google原生下拉刷新"><span class="nav-number">2.</span> <span class="nav-text">google原生下拉刷新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-修改activity-main-xml"><span class="nav-number">2.1.</span> <span class="nav-text">1.修改activity_main.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-修改MainActivity"><span class="nav-number">2.2.</span> <span class="nav-text">2.修改MainActivity</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -779,6 +509,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
