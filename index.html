@@ -233,6 +233,300 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/18/排序/" itemprop="url">
+                  排序笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-18T22:11:20+08:00" content="2016-05-18">
+              2016-05-18
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-归并排序"><a href="#1-归并排序" class="headerlink" title="1.归并排序"></a>1.归并排序</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">public class mergesort&#123;</span><br><span class="line">  public static void mergesort(int[] list)&#123;</span><br><span class="line">    <span class="keyword">if</span>(list.length&gt;1)&#123;</span><br><span class="line">      int[] list1 = new int[list.length/2];</span><br><span class="line">      System.arraycopy(list,0,list1,0,list.length/2);</span><br><span class="line">      mergesort(list1);</span><br><span class="line">      int list2length = list.length-list1.length;</span><br><span class="line">      int[] list2 = new int[list2length];</span><br><span class="line">      System.arraycopy(list,list.length/2,list2,0,list2length);</span><br><span class="line">      mergesort(list2);</span><br><span class="line">      int[] temp = merge(list1,list2);</span><br><span class="line">      System.arraycopy(temp,0,list,0,temp.length);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  public static int[] merge(int[] list1,int[] list2)&#123;</span><br><span class="line">    int[] temp = new int[list1.length + list2.length];</span><br><span class="line">    int c1 = 0;                                           //list1</span><br><span class="line">    int c2 = 0;                                           //list2</span><br><span class="line">    int c3 = 0;                                           //temp</span><br><span class="line">    <span class="keyword">while</span>(c1&lt;list1.length &amp;&amp; c2&lt;list2.length)&#123;</span><br><span class="line">      <span class="keyword">if</span>(list1[c1]&lt;list2[c2])</span><br><span class="line">        temp[c3++] = list1[c1++];</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        temp[c3++] = list2[c2++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(c1&lt;list1.length)</span><br><span class="line">      temp[c3++] = list1[c1++];</span><br><span class="line">    <span class="keyword">while</span>(c2&lt;list2.length)</span><br><span class="line">      temp[c3++] = list2[c2++];</span><br><span class="line">    <span class="built_in">return</span> temp;</span><br><span class="line">  &#125;</span><br><span class="line">  public static void main(String args[])&#123;</span><br><span class="line">    int list[] = &#123;2,4,5,9,1,6,7,8&#125;;</span><br><span class="line">    mergesort(list);</span><br><span class="line">    <span class="keyword">for</span>(int i = 0;i&lt;list.length;i++)&#123;</span><br><span class="line">      System.out.println(list[i]+<span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="排序/归并.jpg" alt="img"></p>
+<h2 id="2-快速排序"><a href="#2-快速排序" class="headerlink" title="2.快速排序"></a>2.快速排序</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/18/java集合框架学习笔记/" itemprop="url">
+                  java集合框架学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-18T20:39:50+08:00" content="2016-05-18">
+              2016-05-18
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="规则集"><a href="#规则集" class="headerlink" title="规则集"></a>规则集</h2><h3 id="1-散列集（HashSet）"><a href="#1-散列集（HashSet）" class="headerlink" title="1.散列集（HashSet）"></a>1.散列集（HashSet）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class testmethodincollection&#123;</span><br><span class="line">  public static void main(String[] args)&#123;</span><br><span class="line">    java.util.Set&lt;String&gt; <span class="built_in">set</span>1 = new java.util.HashSet&lt;String&gt;();</span><br><span class="line">    <span class="built_in">set</span>1.add(<span class="string">"asd"</span>);</span><br><span class="line">    <span class="built_in">set</span>1.add(<span class="string">"asd"</span>);                                        //散列集中不能有相同元素</span><br><span class="line">    <span class="built_in">set</span>1.add(<span class="string">"qwe"</span>);</span><br><span class="line">    System.out.println(<span class="string">"set1 is:"</span>+<span class="built_in">set</span>1+<span class="string">"\n"</span>+<span class="built_in">set</span>1.size());   //散列集中元素顺序是乱的</span><br><span class="line">    <span class="built_in">set</span>1.remove(<span class="string">"qwe"</span>);</span><br><span class="line">    System.out.println(<span class="string">"remove qwe,set1 is:"</span>+<span class="built_in">set</span>1+<span class="string">"\n"</span>+<span class="built_in">set</span>1.size());</span><br><span class="line">    java.util.Set&lt;String&gt; <span class="built_in">set</span>2 = new java.util.HashSet&lt;String&gt;();</span><br><span class="line">    <span class="built_in">set</span>2.addAll(<span class="built_in">set</span>1);                                       //在<span class="built_in">set</span>2中添加<span class="built_in">set</span>1</span><br><span class="line">    <span class="built_in">set</span>2.add(<span class="string">"asd"</span>);</span><br><span class="line">    System.out.println(<span class="string">"add set1 and \"asd\",set2 is:"</span>+<span class="built_in">set</span>2);</span><br><span class="line">    <span class="built_in">set</span>2.retainAll(<span class="built_in">set</span>1);                                    //保留<span class="built_in">set</span>2中与<span class="built_in">set</span>1相同的元素</span><br><span class="line">    System.out.println(<span class="string">"retain set1,set2 is"</span>+<span class="built_in">set</span>2);</span><br><span class="line">    <span class="built_in">set</span>2.removeAll(<span class="built_in">set</span>1);</span><br><span class="line">    System.out.println(<span class="string">"remove set1,set2 is"</span>+<span class="built_in">set</span>2);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-链式散列集"><a href="#2-链式散列集" class="headerlink" title="2.链式散列集"></a>2.链式散列集</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">public class testlinkedhashset&#123;</span><br><span class="line">  public static void main(String args[])&#123;</span><br><span class="line">    Set&lt;String&gt; <span class="built_in">set</span> = new LinkedHashSet&lt;String&gt;();</span><br><span class="line">    set.add(<span class="string">"asd"</span>);</span><br><span class="line">    set.add(<span class="string">"qwe"</span>);</span><br><span class="line">    set.add(<span class="string">"zxc"</span>);</span><br><span class="line">    System.out.println(<span class="built_in">set</span>);                        //链式散列集中元素有顺序</span><br><span class="line">    <span class="keyword">for</span>(Object element:<span class="built_in">set</span>)</span><br><span class="line">      System.out.print(element.toString().toLowerCase()+<span class="string">" \n"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-树形集"><a href="#3-树形集" class="headerlink" title="3.树形集"></a>3.树形集</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">public class testtreeset&#123;</span><br><span class="line">  public static void main(String args[])&#123;</span><br><span class="line">    Set&lt;String&gt; <span class="built_in">set</span> = new HashSet&lt;String&gt;();</span><br><span class="line">    set.add(<span class="string">"asd"</span>);</span><br><span class="line">    set.add(<span class="string">"qwe"</span>);</span><br><span class="line">    set.add(<span class="string">"zxc"</span>);</span><br><span class="line">    set.add(<span class="string">"rty"</span>);</span><br><span class="line">    TreeSet&lt;String&gt; treeset = new TreeSet&lt;String&gt;(<span class="built_in">set</span>);</span><br><span class="line">    System.out.println(<span class="string">"treeset is:"</span>+treeset);</span><br><span class="line">    System.out.println(<span class="string">"treeset中第一个元素："</span>+treeset.first());</span><br><span class="line">    System.out.println(<span class="string">"最后一个元素："</span>+treeset.last());</span><br><span class="line">    System.out.println(<span class="string">"qwe之前的："</span>+treeset.headSet(<span class="string">"qwe"</span>));</span><br><span class="line">    System.out.println(<span class="string">"qwe之后的："</span>+treeset.tailSet(<span class="string">"qwe"</span>));</span><br><span class="line">    System.out.println(<span class="string">"小于p的最小元素："</span>+treeset.lower(<span class="string">"p"</span>));</span><br><span class="line">    System.out.println(<span class="string">"大于p的最大元素："</span>+treeset.higher(<span class="string">"p"</span>));</span><br><span class="line">    System.out.println(<span class="string">"小于或等于\"p\"的最大元素："</span>+treeset.floor(<span class="string">"p"</span>));</span><br><span class="line">    System.out.println(<span class="string">"大于或等于\"p\"的最小元素："</span>+treeset.ceiling(<span class="string">"p"</span>));</span><br><span class="line">    System.out.println(<span class="string">"删除第一个元素并返回："</span>+treeset.pollFirst());</span><br><span class="line">    System.out.println(<span class="string">"删除最后一个元素并返回："</span>+treeset.pollLast());</span><br><span class="line">    System.out.println(<span class="string">"treeset is:"</span>+treeset);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="比较器接口（comparator）"><a href="#比较器接口（comparator）" class="headerlink" title="比较器接口（comparator）"></a>比较器接口（comparator）</h2><h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><h2 id="线性表和集合的静态方法"><a href="#线性表和集合的静态方法" class="headerlink" title="线性表和集合的静态方法"></a>线性表和集合的静态方法</h2><h2 id="规则集和线性表的性能"><a href="#规则集和线性表的性能" class="headerlink" title="规则集和线性表的性能"></a>规则集和线性表的性能</h2><h2 id="向量类Vector和栈类Stack"><a href="#向量类Vector和栈类Stack" class="headerlink" title="向量类Vector和栈类Stack"></a>向量类Vector和栈类Stack</h2><h2 id="队列和优先队列"><a href="#队列和优先队列" class="headerlink" title="队列和优先队列"></a>队列和优先队列</h2><h2 id="图（Map）"><a href="#图（Map）" class="headerlink" title="图（Map）"></a>图（Map）</h2>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/17/new_ding/" itemprop="url">
+                  java opencv『1』
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-17T20:40:09+08:00" content="2016-05-17">
+              2016-05-17
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="环境还没配好"><a href="#环境还没配好" class="headerlink" title="环境还没配好"></a>环境还没配好</h2><h3 id="1-只知道要用到这几个包"><a href="#1-只知道要用到这几个包" class="headerlink" title="1.只知道要用到这几个包"></a>1.只知道要用到这几个包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import org.opencv.core.core;</span><br><span class="line">import org.opencv.core.Mat;</span><br><span class="line">import org.opencv.core.CvType;</span><br><span class="line">import org.opencv.core.Scalar;</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="2-标题"><a href="#2-标题" class="headerlink" title="2.标题"></a>2.标题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">仍然没有</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="3-哈哈"><a href="#3-哈哈" class="headerlink" title="3.哈哈"></a>3.哈哈</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">哈哈</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="4-asd"><a href="#4-asd" class="headerlink" title="4.asd"></a>4.asd</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">哈哈</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">asd</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/15/学习android-listview及其下拉刷新的笔记/" itemprop="url">
                   学习android listview及其原生下拉刷新的笔记
                 </a>
@@ -378,9 +672,10 @@
       
         
           
-            <h2 id="曲线积分"><a href="#曲线积分" class="headerlink" title="曲线积分"></a>曲线积分</h2><h3 id="1-对弧长的曲线积分"><a href="#1-对弧长的曲线积分" class="headerlink" title="1.对弧长的曲线积分"></a>1.对弧长的曲线积分</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![img(file:///home/ding/blog/<span class="built_in">source</span>/_posts/同济大学高等数学第七版第十一章总结/1.png)]</span><br><span class="line">式中f（x，y）相当于曲线的密度，质量=密度*弧长，\(\)计算的就是弧长，所以曲线积分算的就是曲线的质量。</span><br></pre></td></tr></table></figure>
+            <h2 id="曲线积分"><a href="#曲线积分" class="headerlink" title="曲线积分"></a>曲线积分</h2><h3 id="1-对弧长的曲线积分"><a href="#1-对弧长的曲线积分" class="headerlink" title="1.对弧长的曲线积分"></a>1.对弧长的曲线积分</h3><p><img src="同济大学高等数学第七版第十一章总结/1.png" alt="img"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">式中f（x，y）相当于曲线的密度，质量=密度*弧长，\(\)计算的就是弧长，所以曲线积分算的就是曲线的质量。</span><br></pre></td></tr></table></figure></p>
 <h3 id="2-对坐标的曲线积分"><a href="#2-对坐标的曲线积分" class="headerlink" title="2.对坐标的曲线积分"></a>2.对坐标的曲线积分</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个公式可以分为两个部分，即 和 ， 计算的是x方向的曲线积分，即 ， 计算的是y方向的曲线积分，即 。</span><br></pre></td></tr></table></figure>
 <h3 id="3-两类曲线积分的联系"><a href="#3-两类曲线积分的联系" class="headerlink" title="3.两类曲线积分的联系"></a>3.两类曲线积分的联系</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">分别是曲线弧在点（x,y,x）处的切向量的方向角。</span><br></pre></td></tr></table></figure>
+<p><img src="同济大学高等数学第七版第十一章总结/格林公式.png" alt="img"></p>
 <h3 id="4-格林公式"><a href="#4-格林公式" class="headerlink" title="4.格林公式"></a>4.格林公式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h2 id="二-曲面积分"><a href="#二-曲面积分" class="headerlink" title="二.曲面积分"></a>二.曲面积分</h2><h3 id="1-对曲面的曲线积分"><a href="#1-对曲面的曲线积分" class="headerlink" title="1.对曲面的曲线积分"></a>1.对曲面的曲线积分</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>###<br>注意P(x,y)及Q(x,y)在D上具有一阶连续偏导。<br>```</p>
@@ -556,7 +851,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
