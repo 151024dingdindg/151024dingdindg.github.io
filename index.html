@@ -170,7 +170,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -180,7 +180,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -233,7 +233,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/05/18/排序/" itemprop="url">
+                <a class="post-title-link" href="/2016/05/19/排序/" itemprop="url">
                   排序笔记
                 </a>
               
@@ -246,9 +246,9 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-05-18T22:11:20+08:00" content="2016-05-18">
-              2016-05-18
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-19T21:58:44+08:00" content="2016-05-19">
+              2016-05-19
             </time>
           </span>
 
@@ -279,7 +279,7 @@
           
             <h2 id="1-归并排序"><a href="#1-归并排序" class="headerlink" title="1.归并排序"></a>1.归并排序</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">public class mergesort&#123;</span><br><span class="line">  public static void mergesort(int[] list)&#123;</span><br><span class="line">    <span class="keyword">if</span>(list.length&gt;1)&#123;</span><br><span class="line">      int[] list1 = new int[list.length/2];</span><br><span class="line">      System.arraycopy(list,0,list1,0,list.length/2);</span><br><span class="line">      mergesort(list1);</span><br><span class="line">      int list2length = list.length-list1.length;</span><br><span class="line">      int[] list2 = new int[list2length];</span><br><span class="line">      System.arraycopy(list,list.length/2,list2,0,list2length);</span><br><span class="line">      mergesort(list2);</span><br><span class="line">      int[] temp = merge(list1,list2);</span><br><span class="line">      System.arraycopy(temp,0,list,0,temp.length);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  public static int[] merge(int[] list1,int[] list2)&#123;</span><br><span class="line">    int[] temp = new int[list1.length + list2.length];</span><br><span class="line">    int c1 = 0;                                           //list1</span><br><span class="line">    int c2 = 0;                                           //list2</span><br><span class="line">    int c3 = 0;                                           //temp</span><br><span class="line">    <span class="keyword">while</span>(c1&lt;list1.length &amp;&amp; c2&lt;list2.length)&#123;</span><br><span class="line">      <span class="keyword">if</span>(list1[c1]&lt;list2[c2])</span><br><span class="line">        temp[c3++] = list1[c1++];</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        temp[c3++] = list2[c2++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(c1&lt;list1.length)</span><br><span class="line">      temp[c3++] = list1[c1++];</span><br><span class="line">    <span class="keyword">while</span>(c2&lt;list2.length)</span><br><span class="line">      temp[c3++] = list2[c2++];</span><br><span class="line">    <span class="built_in">return</span> temp;</span><br><span class="line">  &#125;</span><br><span class="line">  public static void main(String args[])&#123;</span><br><span class="line">    int list[] = &#123;2,4,5,9,1,6,7,8&#125;;</span><br><span class="line">    mergesort(list);</span><br><span class="line">    <span class="keyword">for</span>(int i = 0;i&lt;list.length;i++)&#123;</span><br><span class="line">      System.out.println(list[i]+<span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="排序/归并.jpg" alt="img"></p>
-<h2 id="2-快速排序"><a href="#2-快速排序" class="headerlink" title="2.快速排序"></a>2.快速排序</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="2-快速排序"><a href="#2-快速排序" class="headerlink" title="2.快速排序"></a>2.快速排序</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">public class quicksort&#123;</span><br><span class="line">  public static void quickSort(int[] list)&#123;</span><br><span class="line">    quickSort(list,0,list.length-1);</span><br><span class="line">  &#125;</span><br><span class="line">  public static void quickSort(int[] list,int first,int last)&#123;</span><br><span class="line">    <span class="keyword">if</span>(last &gt; first)&#123;</span><br><span class="line">      int pivotindex = partition(list,first,last);</span><br><span class="line">      quickSort(list,first,pivotindex-1);</span><br><span class="line">      quickSort(list,pivotindex+1,last);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  public static int partition(int[] list,int first,int last)&#123;</span><br><span class="line">    int pivot = list[first];      //choose the first element as the pivot</span><br><span class="line">    int low = first+1;</span><br><span class="line">    int high = last;</span><br><span class="line">    <span class="keyword">while</span>(high &gt; low)&#123;</span><br><span class="line">      <span class="keyword">while</span>(high &gt;= low &amp;&amp; list[low] &lt;= pivot)    //从开始往后找&gt;=主元的给low</span><br><span class="line">        low++;</span><br><span class="line">      <span class="keyword">while</span>(high &gt;= low &amp;&amp; list[high] &gt; pivot)    //从后往前找&lt;主元的给high</span><br><span class="line">        high--;</span><br><span class="line">      <span class="keyword">if</span>(high &gt; low)&#123;                             //交换high，low项</span><br><span class="line">        int temp = list[high];</span><br><span class="line">        list[high] = list[low];</span><br><span class="line">        list[low] = temp;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(high&gt;first &amp;&amp; list[high]&gt;=pivot)</span><br><span class="line">      high--;</span><br><span class="line">    <span class="keyword">if</span>(pivot&gt;list[high])&#123;                          //如果主元比high项大，交换</span><br><span class="line">      list[first] = list[high];</span><br><span class="line">      list[high] = pivot;</span><br><span class="line">      <span class="built_in">return</span> high;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="built_in">return</span> first;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  public static void main(String args[])&#123;</span><br><span class="line">    int[] list = &#123;2,3,2,5,6,1,-2,3,14,12&#125;;</span><br><span class="line">    quickSort(list);</span><br><span class="line">    <span class="keyword">for</span>(int i = 0;i&lt;list.length;i++)</span><br><span class="line">      System.out.println(list[i]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -342,7 +342,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-18T20:39:50+08:00" content="2016-05-18">
               2016-05-18
             </time>
@@ -438,7 +438,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-17T20:40:09+08:00" content="2016-05-17">
               2016-05-17
             </time>
@@ -540,7 +540,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-15T12:46:36+08:00" content="2016-05-15">
               2016-05-15
             </time>
@@ -641,7 +641,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-13T20:57:55+08:00" content="2016-05-13">
               2016-05-13
             </time>
@@ -672,11 +672,10 @@
       
         
           
-            <h2 id="曲线积分"><a href="#曲线积分" class="headerlink" title="曲线积分"></a>曲线积分</h2><h3 id="1-对弧长的曲线积分"><a href="#1-对弧长的曲线积分" class="headerlink" title="1.对弧长的曲线积分"></a>1.对弧长的曲线积分</h3><p><img src="同济大学高等数学第七版第十一章总结/1.png" alt="img"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">式中f（x，y）相当于曲线的密度，质量=密度*弧长，\(\)计算的就是弧长，所以曲线积分算的就是曲线的质量。</span><br></pre></td></tr></table></figure></p>
+            <h2 id="曲线积分"><a href="#曲线积分" class="headerlink" title="曲线积分"></a>曲线积分</h2><h3 id="1-对弧长的曲线积分"><a href="#1-对弧长的曲线积分" class="headerlink" title="1.对弧长的曲线积分"></a>1.对弧长的曲线积分</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">式中f（x，y）相当于曲线的密度，质量=密度*弧长，\(\)计算的就是弧长，所以曲线积分算的就是曲线的质量。</span><br></pre></td></tr></table></figure>
 <h3 id="2-对坐标的曲线积分"><a href="#2-对坐标的曲线积分" class="headerlink" title="2.对坐标的曲线积分"></a>2.对坐标的曲线积分</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个公式可以分为两个部分，即 和 ， 计算的是x方向的曲线积分，即 ， 计算的是y方向的曲线积分，即 。</span><br></pre></td></tr></table></figure>
 <h3 id="3-两类曲线积分的联系"><a href="#3-两类曲线积分的联系" class="headerlink" title="3.两类曲线积分的联系"></a>3.两类曲线积分的联系</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">分别是曲线弧在点（x,y,x）处的切向量的方向角。</span><br></pre></td></tr></table></figure>
-<p><img src="同济大学高等数学第七版第十一章总结/格林公式.png" alt="img"></p>
-<h3 id="4-格林公式"><a href="#4-格林公式" class="headerlink" title="4.格林公式"></a>4.格林公式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="4-格林公式"><a href="#4-格林公式" class="headerlink" title="4.格林公式"></a>4.格林公式</h3><p><img src="http://www.23book.com/upload/2016/03/20/7f8aee35-da2e-44c9-a3d9-0ac31ebd104b.jpg" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
 <h2 id="二-曲面积分"><a href="#二-曲面积分" class="headerlink" title="二.曲面积分"></a>二.曲面积分</h2><h3 id="1-对曲面的曲线积分"><a href="#1-对曲面的曲线积分" class="headerlink" title="1.对曲面的曲线积分"></a>1.对曲面的曲线积分</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>###<br>注意P(x,y)及Q(x,y)在D上具有一阶连续偏导。<br>```</p>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">asd</a></p>
@@ -742,7 +741,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-11T12:58:16+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -852,7 +851,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">6</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -899,7 +898,7 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
