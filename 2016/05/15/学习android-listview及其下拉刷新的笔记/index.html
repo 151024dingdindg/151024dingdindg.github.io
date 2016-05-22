@@ -88,7 +88,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习android listview及其原生下拉刷新的笔记">
 <meta property="og:url" content="http://yoursite.com/2016/05/15/学习android-listview及其下拉刷新的笔记/index.html">
-<meta property="og:site_name" content="dingding">
+<meta property="og:site_name" content="丁丁">
 <meta property="og:description" content="listview的建立1.定义一个Data实体类（作为listview适配器的适配类型）代码如下12345678910111213141516public class Data &amp;#123;    public String name;    public int imageId;    public Data(String name,int imageId)    &amp;#123;        t">
 <meta property="og:updated_time" content="2016-05-15T05:21:45.840Z">
 <meta name="twitter:card" content="summary">
@@ -111,10 +111,10 @@
   };
 </script>
 
-  <title> 学习android listview及其原生下拉刷新的笔记 | dingding </title>
+  <title> 学习android listview及其原生下拉刷新的笔记 | 丁丁 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="chinese">
 
   
 
@@ -142,11 +142,11 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">dingding</span>
+      <span class="site-title">丁丁</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">asd</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -169,7 +169,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -179,7 +179,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -242,7 +242,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-15T12:46:36+08:00" content="2016-05-15">
               2016-05-15
             </time>
@@ -292,6 +292,27 @@
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/path/to/wechat-reward-image" alt="丁丁 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/path/to/alipay-reward-image" alt="丁丁 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -362,10 +383,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -374,15 +395,15 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
-               alt="dingding" />
-          <p class="site-author-name" itemprop="name">dingding</p>
-          <p class="site-description motion-element" itemprop="description">ding's blog</p>
+               alt="丁丁" />
+          <p class="site-author-name" itemprop="name">丁丁</p>
+          <p class="site-description motion-element" itemprop="description">丁丁的博客</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -417,12 +438,16 @@
           <div class="links-of-blogroll motion-element links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
-              Links
+              友情连接
             </div>
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="www.baidu.com" title="baidu" target="_blank">baidu</a>
+                  <a href="https://blog.yoitsu.moe" title="萌狼" target="_blank">萌狼</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="angovia.com" title="奥维" target="_blank">奥维</a>
                 </li>
               
             </ul>
@@ -461,11 +486,11 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">dingding</span>
+  <span class="author" itemprop="copyrightHolder">丁丁</span>
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
