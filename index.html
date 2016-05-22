@@ -170,7 +170,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -180,7 +180,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -233,8 +233,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/05/20/socket学习笔记/" itemprop="url">
-                  Unbenannt
+                <a class="post-title-link" href="/2016/05/22/socket学习笔记/" itemprop="url">
+                  Untitled
                 </a>
               
             
@@ -246,9 +246,9 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-20T22:13:51+08:00" content="2016-05-20">
-              2016-05-20
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-22T14:43:47+08:00" content="2016-05-22">
+              2016-05-22
             </time>
           </span>
 
@@ -277,8 +277,9 @@
       
         
           
-            <h2 id="client端"><a href="#client端" class="headerlink" title="client端"></a>client端</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line">import java.net.*;</span><br><span class="line"></span><br><span class="line">public class client</span><br><span class="line">&#123;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        try&#123;</span><br><span class="line">            Socket socket = new Socket(<span class="string">"0"</span>,1681);</span><br><span class="line">            PrintWriter out = new PrintWriter(socket.getOutputStream());</span><br><span class="line">            BufferedReader <span class="keyword">in</span> = new BufferedReader(new InputStreamReader(socket.getInputStream()));</span><br><span class="line">            BufferedReader sin = new BufferedReader(new InputStreamReader(System.in));</span><br><span class="line">            String s;</span><br><span class="line">            <span class="keyword">do</span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"(client1端)请输入："</span>);</span><br><span class="line">                s=sin.readLine();</span><br><span class="line">                out.println(s);</span><br><span class="line">                out.flush();</span><br><span class="line">                System.out.println(<span class="string">"sever说:"</span>+in.readLine());</span><br><span class="line">                <span class="keyword">if</span>(s.equals(null))&#123;</span><br><span class="line">                  System.out.println(<span class="string">"服务器断开"</span>);</span><br><span class="line">                  <span class="built_in">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">while</span>(!s.equals(<span class="string">"bye"</span>));</span><br><span class="line">            out.close();</span><br><span class="line">            in.close();</span><br><span class="line">            socket.close();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        catch(Exception e)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(e);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="server端"><a href="#server端" class="headerlink" title="server端"></a>server端</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line">import java.net.*;</span><br><span class="line"></span><br><span class="line">public class server</span><br><span class="line">&#123;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        try&#123;</span><br><span class="line">            ServerSocket server = new ServerSocket(1681);</span><br><span class="line">            Socket socket = server.accept();</span><br><span class="line">            BufferedReader <span class="keyword">in</span> = new BufferedReader(new InputStreamReader(socket.getInputStream()));//获取client端流</span><br><span class="line">            PrintWriter out = new PrintWriter(socket.getOutputStream());//发送数据</span><br><span class="line">            BufferedReader sin = new BufferedReader(new InputStreamReader(System.in));</span><br><span class="line">            String s;</span><br><span class="line">            <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">                System.out.println(<span class="string">"（sever端）请输入："</span>);</span><br><span class="line">                <span class="keyword">if</span>((s = (String)in.read()).equals(<span class="string">"bye"</span>))</span><br><span class="line">                  <span class="built_in">break</span>;</span><br><span class="line">                System.out.println(<span class="string">"client1说:"</span>+s);</span><br><span class="line">                out.println(sin.readLine());</span><br><span class="line">                out.flush();</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">"end"</span>);</span><br><span class="line">            in.close();</span><br><span class="line">            out.close();</span><br><span class="line">            socket.close();</span><br><span class="line">            server.close();</span><br><span class="line">        &#125;</span><br><span class="line">        catch(Exception e)&#123;</span><br><span class="line">            System.out.println(e);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h2 id="client端"><a href="#client端" class="headerlink" title="client端"></a>client端</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line">import java.net.*;</span><br><span class="line"></span><br><span class="line">public class client</span><br><span class="line">&#123;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        try&#123;</span><br><span class="line">            Socket socket = new Socket(<span class="string">"127.0.1.1"</span>,1681);</span><br><span class="line">            InetAddress addr = socket.getInetAddress();</span><br><span class="line">            System.out.println(addr.getHostAddress());</span><br><span class="line">            PrintWriter out = new PrintWriter(socket.getOutputStream());</span><br><span class="line">            BufferedReader <span class="keyword">in</span> = new BufferedReader(new InputStreamReader(socket.getInputStream()));</span><br><span class="line">            BufferedReader sin = new BufferedReader(new InputStreamReader(System.in));</span><br><span class="line">            String s;</span><br><span class="line">            <span class="keyword">do</span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"(client1端)请输入："</span>);</span><br><span class="line">                s=sin.readLine();</span><br><span class="line">                out.println(s);</span><br><span class="line">                out.flush();</span><br><span class="line">                System.out.println(<span class="string">"sever说:"</span>+in.readLine());</span><br><span class="line">                <span class="keyword">if</span>(s.equals(null))&#123;</span><br><span class="line">                  System.out.println(<span class="string">"服务器断开"</span>);</span><br><span class="line">                  <span class="built_in">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">while</span>(!s.equals(<span class="string">"bye"</span>));</span><br><span class="line">            out.close();</span><br><span class="line">            in.close();</span><br><span class="line">            socket.close();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        catch(Exception e)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="server端"><a href="#server端" class="headerlink" title="server端"></a>server端</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line">import java.net.*;</span><br><span class="line"></span><br><span class="line">public class server</span><br><span class="line">&#123;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        try&#123;</span><br><span class="line">            ServerSocket server = new ServerSocket(1681);</span><br><span class="line">            Socket socket = server.accept();</span><br><span class="line">            InetAddress addr = socket.getInetAddress();</span><br><span class="line">            System.out.println(addr.getHostAddress());</span><br><span class="line">            BufferedReader <span class="keyword">in</span> = new BufferedReader(new InputStreamReader(socket.getInputStream()));//获取client端流</span><br><span class="line">            PrintWriter out = new PrintWriter(socket.getOutputStream());//发送数据</span><br><span class="line">            BufferedReader sin = new BufferedReader(new InputStreamReader(System.in));</span><br><span class="line">            String s;</span><br><span class="line">            <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">                System.out.println(<span class="string">"（sever端）请输入："</span>);</span><br><span class="line">                <span class="keyword">if</span>((s = in.readLine()).equals(<span class="string">"bye"</span>))</span><br><span class="line">                  <span class="built_in">break</span>;</span><br><span class="line">                System.out.println(<span class="string">"client1说:"</span>+s);</span><br><span class="line">                out.println(sin.readLine());</span><br><span class="line">                out.flush();</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">"end"</span>);</span><br><span class="line">            in.close();</span><br><span class="line">            out.close();</span><br><span class="line">            socket.close();</span><br><span class="line">            server.close();</span><br><span class="line">        &#125;</span><br><span class="line">        catch(Exception e)&#123;</span><br><span class="line">            System.out.println(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="InetAddress"><a href="#InetAddress" class="headerlink" title="InetAddress"></a>InetAddress</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import java.net.*;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class inetaddress&#123;</span><br><span class="line">  public static void main(String args[])&#123;</span><br><span class="line">    try&#123;</span><br><span class="line">          InetAddress addr = InetAddress.getLocalHost();</span><br><span class="line">          //ip = addr.getHostAddress();</span><br><span class="line">          System.out.println(addr.getHostName());</span><br><span class="line">          System.out.println(addr.getHostAddress());</span><br><span class="line">     &#125; catch(Exception ex) &#123;</span><br><span class="line">         System.err.print(ex);</span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -341,7 +342,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-20T10:05:32+08:00" content="2016-05-20">
               2016-05-20
             </time>
@@ -438,7 +439,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-18T20:39:50+08:00" content="2016-05-18">
               2016-05-18
             </time>
@@ -534,7 +535,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-17T20:40:09+08:00" content="2016-05-17">
               2016-05-17
             </time>
@@ -636,7 +637,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-15T12:46:36+08:00" content="2016-05-15">
               2016-05-15
             </time>
@@ -737,7 +738,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-13T20:57:55+08:00" content="2016-05-13">
               2016-05-13
             </time>
@@ -837,7 +838,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-11T12:58:16+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -947,7 +948,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -994,7 +995,7 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
